@@ -4,3 +4,6 @@
 [submodule "vim/bundle/afterimage"]
 	path = vim/bundle/afterimage
 	url = https://github.com/tpope/vim-afterimage.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
