@@ -20,9 +20,9 @@
   set history=1000  " remember most of the commands
   set background=dark  " dark is stark
   if has("gui_running")
-    set guioptions-=m  " remove menu bar
-    set guioptions-=T  " remove toolbar
-    set guioptions-=r  " remove scroll-bar
+    "set guioptions-=m  " remove menu bar
+    "set guioptions-=T  " remove toolbar
+    "set guioptions-=r  " remove scroll-bar
     colorscheme railscasts
   elseif $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
@@ -84,7 +84,7 @@
   set tabstop=2  " real tabs are 2 spaces
   set softtabstop=2  " tab and backspace are 2 spaces
   set shiftwidth=2  " indent 2 spaces
-  set nowrap  " do not wrap lines
+  " set nowrap  " do not wrap lines
 " }
 
 " Search {
@@ -94,7 +94,8 @@
 " }
 
 " Plugin Settings {
-
+  " NerdTree
+  map <C-f> :NERDTree<CR>
 " }
 
 " Mappings {
@@ -119,5 +120,6 @@
   " make vim restore cursor position in files
   if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+    au FileType python setl sw=4 sts=4
   endif
 " }
