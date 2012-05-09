@@ -20,9 +20,9 @@
   set history=1000  " remember most of the commands
   set background=dark  " dark is stark
   if has("gui_running")
-    "set guioptions-=m  " remove menu bar
-    "set guioptions-=T  " remove toolbar
-    "set guioptions-=r  " remove scroll-bar
+    set guioptions-=m  " remove menu bar
+    set guioptions-=T  " remove toolbar
+    set guioptions-=r  " remove scroll-bar
     colorscheme railscasts
   elseif $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
@@ -113,6 +113,11 @@
     map <S-Left> :tabprev<CR>
     map <S-Right> :tabnext<CR>
     " direct to tab # with #gt where # is the number of the tab
+  " }
+  " Toolbars {
+    nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+    nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
+    nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
   " }
 " }
 
